@@ -2,8 +2,12 @@ version: '3'
 services:
   web:
     build: ./docker/web
+    ports:
+      - "8000:80"
     volumes:
       - ./:/var/www/sample
+    working_dir: /var/www/sample
+    privileged: true
     depends_on:
       - db
   db:
