@@ -77,6 +77,9 @@ RUN yum -y --enablerepo=mysql57-community install mysql-community-client
 COPY conf/www.conf /etc/php-fpm.d/
 COPY conf/laravel.conf /etc/nginx/default.d/
 
+RUN  mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.org
+COPY conf/nginx.conf        /etc/nginx/
+
 CMD ["/sbin/init"]
 
 # docker run --privileged -d -p 8080:80 -v ~/git/docker_awslinux2:/opt/test --name test_container test /sbin/init
