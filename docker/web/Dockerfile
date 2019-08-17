@@ -75,7 +75,7 @@ RUN yum -y --enablerepo=mysql57-community install mysql-community-client
 # config
 #-------------------------------------------------
 COPY conf/www.conf /etc/php-fpm.d/
-COPY conf/server.conf /etc/nginx/default.d/
+COPY conf/server.conf /etc/nginx/conf.d/
 
 RUN  mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.org
 COPY conf/nginx.conf        /etc/nginx/
