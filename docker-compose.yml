@@ -5,8 +5,8 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - ./:/var/www/sample
-    working_dir: /var/www/sample
+      - ./:/var/www/twitter_pj
+    working_dir: /var/www/twitter_pj
     privileged: true
     depends_on:
       - db
@@ -17,9 +17,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: test_db
-      MYSQL_PASSWORD: test_db!
-      MYSQL_DATABASE: test_db
+      MYSQL_USER: twitter
+      MYSQL_PASSWORD: twitter
+      MYSQL_DATABASE: twitter_db
     volumes:
       - db-data:/var/lib/mysql
   s3:
