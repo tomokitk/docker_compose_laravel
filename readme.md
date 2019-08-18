@@ -7,7 +7,7 @@ docker-compose up
 
 上記完了後、別のターミナルを起動して
 ```
-docker exec -it sample_web_1 /bin/bash
+docker exec -it docker_compose_laravel_web_1 /bin/bash
 composer install
 chmod -R 777 ./storage
 chmod -R 777 ./bootstrap/cache 
