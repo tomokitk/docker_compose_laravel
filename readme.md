@@ -15,7 +15,4 @@ systemctl start nginx
 systemctl start php-fpm
 ```
 
-ブラウザに入力
-```
-localhost:8000
-```
+
